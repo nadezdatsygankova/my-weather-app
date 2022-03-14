@@ -9,6 +9,8 @@ const Forecast = () => {
     let [error, setError] = useState(false);
     let [loading, setLoading] = useState(false);
 
+
+
     function getForecast(e) {
         e.preventDefault();
         if (city.length === 0) {
@@ -35,6 +37,7 @@ const Forecast = () => {
                     throw new Error()
                 }
                 setResponseObj(response);
+                console.log(response.weather[0].icon);
                 setLoading(false);
             })
             .catch(err => {
@@ -85,6 +88,7 @@ const Forecast = () => {
                     responseObj={responseObj}
                     error={error}
                     loading={loading}
+                    weatherData={responseObj}
                 />
             </div>
         </div>

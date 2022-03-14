@@ -16,7 +16,6 @@ function App() {
       <footer>
         Page created by Nadia Tsygankova
       </footer>
-
     </div>
   );
 }
