@@ -37,7 +37,6 @@ const Forecast = () => {
                     throw new Error()
                 }
                 setResponseObj(response);
-                console.log(response.weather[0].icon);
                 setLoading(false);
             })
             .catch(err => {
